@@ -45,6 +45,16 @@ RUN { \
 } > /etc/apache2/conf-available/wordpress.conf \
     && a2enconf wordpress
 
+# Fix Apache ServerName for Railway
+RUN echo "ServerName r2y974z6.up.railway.app" >> /etc/apache2/apache2.conf
+
+# Copy Railway-optimized Apache config
+COPY apache-railway-minimal.conf /etc/apache2/conf-available/railway-minimal.conf
+RUN a2enconf railway-minimal
+
+# Enable required Apache modules
+RUN a2enmod headers deflate
+
 # Copy WordPress files
 COPY wordpress/ /var/www/html/
 
