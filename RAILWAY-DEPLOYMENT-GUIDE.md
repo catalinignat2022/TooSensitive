@@ -131,17 +131,28 @@ WP_MEMORY_LIMIT=512M
 
 ---
 
-## 📋 PASUL 5: Deploy și Test
+## 🎉 VERIFICĂ DEPLOYMENT-UL
 
-### 5.1 Trigger Deploy:
-1. Railway va face deploy automat la push pe GitHub
-2. Sau click **"Deploy"** manual în interfață
-3. Urmărește logurile în tab **"Deploy"**
+### 5.1 Monitorizează deployment:
+```bash
+railway logs --follow
+```
 
-### 5.2 Testează deployment:
-1. După deploy, copiază Railway URL-ul (ex: `yourapp-production.up.railway.app`)
-2. Deschide URL-ul în browser
-3. Dacă vezi setup-ul WordPress, e perfect!
+### 5.2 Testează site-ul:
+- Accesează URL-ul Railway: `https://your-app.up.railway.app`
+- Verifică WordPress Admin: `/wp-admin`
+
+### 5.3 Troubleshooting:
+Dacă întâmpini probleme, vezi **`RAILWAY-TROUBLESHOOTING.md`** pentru:
+- ✅ Fix pentru Apache ServerName errors
+- 🗄️ Database connection issues  
+- 🔒 SSL/HTTPS configuration
+- 📊 Performance optimization
+- 🔧 Common deployment problems
+
+---
+
+## 🌍 CONFIGURARE DOMENIU CUSTOM
 
 ---
 
