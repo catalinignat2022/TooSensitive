@@ -57,8 +57,11 @@ RUN mkdir -p /var/www/html/wp-content/uploads \
     && chown -R www-data:www-data /var/www/html/wp-content/uploads \
     && chmod -R 775 /var/www/html/wp-content/uploads
 
-# Copy wp-config
-COPY railway-wp-config.php /var/www/html/wp-config.php
+# Copy simplified wp-config
+COPY railway-wp-config-simple.php /var/www/html/wp-config.php
+
+# Add health check page
+COPY health-check.html /var/www/html/
 
 EXPOSE 80
 

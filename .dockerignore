@@ -1,0 +1,36 @@
+# Git și documentație
+.git
+.gitignore
+*.md
+README*
+CHANGELOG*
+LICENSE*
+
+# Fișiere de dezvoltare
+.vscode/
+.idea/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Scripts locale și debugging
+*.sh
+debug-*
+test-*
+
+# Node și alte dependințe
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache și temporare
+.cache/
+.npm/
+.yarn/
+
+# Archives
+*.tar.gz
+*.zip
+*.rar
