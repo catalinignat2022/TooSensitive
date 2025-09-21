@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Breathing Button</title>
+    <script src="http://localhost:8000/wp-content/themes/psychotherapy/assets/js/emergency-toolkit.js"></script>
+    <script src="http://localhost:8000/wp-content/themes/psychotherapy/assets/js/assessment.js"></script>
+</head>
+<body>
+    <button class="button is-primary start-technique" data-steps='[{"label":"Inhale","secs":4},{"label":"Hold","secs":7},{"label":"Exhale","secs":8}]'>Start 4-7-8 breathing</button>
+
+    <script>
+        console.log('TechniqueRunner disponibil:', typeof window.TechniqueRunner);
+        
+        // Testez direct butonul
+        document.addEventListener('click', function(e) {
+            console.log('Click pe:', e.target);
+            if (e.target.classList.contains('start-technique')) {
+                console.log('Click pe butonul start-technique detectat');
+            }
+        });
+    </script>
+</body>
+</html>

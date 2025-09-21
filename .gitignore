@@ -1,0 +1,41 @@
+# WordPress specific
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# Local development
+.DS_Store
+.env
+.env.local
+.vscode/
+*.log
+
+# Database exports (keep for deployment)
+!toosensitive-database.sql
+
+# Node modules if any
+node_modules/
+
+# Railway specific
+.railway/
+
+# Backup files
+*.bak
+*.backup
+*.sql.gz
+
+# Cache directories
+cache/
+*/cache/
+wp-content/w3tc-config/
+
+# Sensitive files
+wp-config-local.php
+.htaccess.backup
+
+# Exclude plugin vendor directories that may contain test keys
+wp-content/plugins/*/vendor/
+wordpress/wp-content/plugins/*/vendor/

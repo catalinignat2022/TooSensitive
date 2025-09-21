@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="energy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="focus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Energy waves -->
+  <g opacity="0.3">
+    <path d="M0 200 Q300 150 600 200 T1200 200" stroke="white" stroke-width="4" fill="none"/>
+    <path d="M0 250 Q300 200 600 250 T1200 250" stroke="white" stroke-width="3" fill="none"/>
+    <path d="M0 300 Q300 250 600 300 T1200 300" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Central focus target -->
+  <g transform="translate(600, 315)">
+    <circle cx="0" cy="0" r="120" fill="url(#focus)"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="white" stroke-width="2" opacity="0.2"/>
+    <circle cx="0" cy="0" r="20" fill="white" opacity="0.8"/>
+    
+    <!-- Hyperfocus rays -->
+    <g stroke="white" stroke-width="2" opacity="0.7">
+      <line x1="-150" y1="0" x2="-125" y2="0"/>
+      <line x1="125" y1="0" x2="150" y2="0"/>
+      <line x1="0" y1="-150" x2="0" y2="-125"/>
+      <line x1="0" y1="125" x2="0" y2="150"/>
+      <line x1="-106" y1="-106" x2="-88" y2="-88"/>
+      <line x1="88" y1="-106" x2="106" y2="-88"/>
+      <line x1="-106" y1="106" x2="-88" y2="88"/>
+      <line x1="88" y1="106" x2="106" y2="88"/>
+    </g>
+  </g>
+  
+  <!-- Energy bursts around the focus -->
+  <g opacity="0.8">
+    <!-- Left energy burst -->
+    <g transform="translate(200, 200)">
+      <polygon points="0,0 20,30 -20,30" fill="url(#energy)"/>
+      <polygon points="0,0 30,20 30,-20" fill="url(#energy)"/>
+      <polygon points="0,0 20,-30 -20,-30" fill="url(#energy)"/>
+      <polygon points="0,0 -30,20 -30,-20" fill="url(#energy)"/>
+    </g>
+    
+    <!-- Right energy burst -->
+    <g transform="translate(1000, 400)">
+      <polygon points="0,0 15,25 -15,25" fill="url(#energy)"/>
+      <polygon points="0,0 25,15 25,-15" fill="url(#energy)"/>
+      <polygon points="0,0 15,-25 -15,-25" fill="url(#energy)"/>
+      <polygon points="0,0 -25,15 -25,-15" fill="url(#energy)"/>
+    </g>
+  </g>
+  
+  <!-- Flowing energy particles -->
+  <g opacity="0.6">
+    <circle cx="150" cy="350" r="8" fill="#FFD700">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 100,50; 200,0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="450" r="6" fill="#FF8C00">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 150,-30; 300,20" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="250" r="10" fill="#FFD700">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -100,80; -200,10" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Lightning bolt for energy -->
+  <g transform="translate(100, 100)">
+    <path d="M30 10 L20 50 L35 50 L25 90 L45 40 L35 40 L45 10 Z" fill="#FFD700" stroke="white" stroke-width="2"/>
+  </g>
+  
+  <!-- Brain with energy -->
+  <g transform="translate(900, 100)">
+    <path d="M50 30 C40 20, 20 25, 15 40 C10 55, 20 70, 35 75 C50 80, 70 75, 80 60 C90 45, 85 30, 75 25 C65 22, 60 25, 50 30 Z" fill="rgba(255,255,255,0.7)"/>
+    <!-- Energy in brain -->
+    <circle cx="45" cy="45" r="4" fill="#FFD700"/>
+    <circle cx="55" cy="50" r="3" fill="#FF8C00"/>
+    <circle cx="50" cy="55" r="3" fill="#FFD700"/>
+  </g>
+  
+  <!-- Title text -->
+  <g>
+    <text x="600" y="180" text-anchor="middle" fill="white" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="bold">
+      The Hyperfocus Phenomenon
+    </text>
+    <text x="600" y="220" text-anchor="middle" fill="white" font-family="'Segoe UI', Arial, sans-serif" font-size="28" opacity="0.9">
+      ADHD Energy & Enthusiasm Create Extraordinary Achievement
+    </text>
+    <text x="600" y="500" text-anchor="middle" fill="white" font-family="'Segoe UI', Arial, sans-serif" font-size="22" opacity="0.8">
+      Passion-Driven Concentration & Flow States
+    </text>
+  </g>
+  
+  <!-- Bottom accent -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(255,255,255,0.1)"/>
+  <text x="600" y="610" text-anchor="middle" fill="white" font-family="'Segoe UI', Arial, sans-serif" font-size="18" opacity="0.9">
+    ⚡ Hyperfocus Research • 🎯 Flow State Studies • 🔥 Energy Psychology
+  </text>
+</svg>
