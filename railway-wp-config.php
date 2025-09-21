@@ -48,6 +48,13 @@ if ($railway_url) {
 }
 
 /**
+ * Set Apache ServerName environment variable for Railway
+ */
+if (!empty($railway_url)) {
+    putenv('APACHE_SERVER_NAME=' . $railway_url);
+}
+
+/**
  * For developers: WordPress debugging mode.
  */
 $debug_mode = $_ENV['WP_DEBUG'] ?? $_ENV['RAILWAY_ENVIRONMENT'] === 'development';

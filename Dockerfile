@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     curl \
     default-mysql-client \
+    gettext-base \
     && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
@@ -58,6 +59,16 @@ RUN { \
 } > /etc/apache2/conf-available/wordpress.conf \
     && a2enconf wordpress
 
+# Fix Apache ServerName warning for Railway deployment
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# Copy and enable Railway-specific Apache configuration
+COPY apache-railway.conf /etc/apache2/conf-available/railway.conf
+RUN a2enconf railway
+
+# Enable additional Apache modules for optimization
+RUN a2enmod expires headers deflate
+
 # Copy WordPress files
 COPY wordpress/ /var/www/html/
 
@@ -73,11 +84,15 @@ RUN mkdir -p /var/www/html/wp-content/uploads \
 # Copy custom wp-config for Railway
 COPY railway-wp-config.php /var/www/html/wp-config.php
 
+# Copy startup script
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD curl -f http://localhost/ || exit 1
 
 EXPOSE 80
 
-# Start Apache
-CMD ["apache2-foreground"]
+# Start with custom entrypoint
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
