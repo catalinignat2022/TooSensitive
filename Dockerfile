@@ -62,6 +62,7 @@ COPY railway-wp-config-simple.php /var/www/html/wp-config.php
 
 # Add health check page
 COPY health-check.html /var/www/html/
+COPY health-check.php /var/www/html/
 
 EXPOSE 80
 
