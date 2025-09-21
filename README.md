@@ -2,6 +2,29 @@
 
 > A comprehensive WordPress website dedicated to supporting individuals with Rejection Sensitive Dysphoria (RSD)
 
+## 🚀 Quick Deployment
+
+### Automatic Railway Deployment (RECOMMENDED)
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login to Railway
+railway login
+
+# Run complete auto-deployment
+./railway-auto-deploy.sh
+```
+
+### Manual Environment Setup
+```bash
+# Generate all WordPress security variables
+./generate-railway-env.sh
+
+# Test environment configuration
+./test-env.sh
+```
+
 ## 🌟 Project Overview
 
 TooSensitive is a mental health platform specifically designed to address the unique challenges of Rejection Sensitive Dysphoria. Our mission is to provide education, support, tools, and community for those navigating RSD.

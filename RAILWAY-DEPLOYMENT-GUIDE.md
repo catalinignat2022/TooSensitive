@@ -5,7 +5,41 @@
 
 ---
 
-## 📋 PASUL 1: Pregătire Proiect
+## � DEPLOYMENT AUTOMAT (RECOMANDAT)
+
+### Opțiunea 1: Script Complet cu Railway CLI
+```bash
+# 1. Installează Railway CLI
+npm install -g @railway/cli
+# sau pentru macOS:
+brew install railway
+
+# 2. Conectează-te la Railway
+railway login
+
+# 3. Rulează scriptul automat (face totul!)
+./railway-auto-deploy.sh
+```
+
+### Opțiunea 2: Doar Generarea Variabilelor
+```bash
+# Generează toate variabilele de securitate
+./generate-railway-env.sh
+
+# Apoi copiază output-ul în Railway Dashboard → Settings → Environment
+```
+
+### Opțiunea 3: Test Variabile Locale
+```bash
+# Verifică dacă toate variabilele sunt setate corect
+./test-env.sh
+```
+
+---
+
+## �📋 DEPLOYMENT MANUAL
+
+### PASUL 1: Pregătire Proiect
 
 ### 1.1 Verifică fișierele create:
 - ✅ `Dockerfile` - Container-ul WordPress
