@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Test</title>
+</head>
+<body>
+    <h1>JavaScript Execution Test</h1>
+    <div id="test-output">JavaScript not executed</div>
+    
+    <script>
+        console.log('🔧 Test script starting...');
+        document.getElementById('test-output').innerHTML = 'JavaScript is working!';
+        
+        // Test if we can create elements
+        const testDiv = document.createElement('div');
+        testDiv.id = 'js-test-element';
+        testDiv.innerHTML = 'Dynamic element created';
+        testDiv.style.cssText = 'background:green;color:white;padding:10px;margin:10px;';
+        document.body.appendChild(testDiv);
+    </script>
+</body>
+</html>

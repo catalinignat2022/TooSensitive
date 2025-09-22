@@ -1,0 +1,53 @@
+User-agent: *
+Allow: /
+
+# Block access to admin and configuration files
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/uploads/
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+Disallow: /wp-config.php
+Disallow: /?s=
+Disallow: /search
+Disallow: /author/
+Disallow: /users/
+Disallow: */trackback/
+Disallow: */feed/
+Disallow: */comments/
+Disallow: */page/
+
+# Allow specific important pages
+Allow: /rsd-assessment/
+Allow: /education/
+Allow: /coping-strategies/
+Allow: /community/
+Allow: /app-preview/
+Allow: /about/
+Allow: /calm-now/
+
+# Special instructions for search engines
+User-agent: Googlebot
+Allow: /wp-content/uploads/
+
+User-agent: Bingbot
+Allow: /wp-content/uploads/
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: http://localhost:8000/sitemap_index.xml
